@@ -22,9 +22,7 @@ export class FooterComponent {
   ];
   
   socialLinks = [
-    { icon: 'linkedin', url: 'https://linkedin.com/', label: 'LinkedIn' },
-    { icon: 'twitter', url: 'https://twitter.com/', label: 'Twitter' },
-    { icon: 'facebook', url: 'https://facebook.com/', label: 'Facebook' },
-    { icon: 'github', url: 'https://github.com/jeffreylongo/speedmaster-consulting-website', label: 'GitHub' }
+    { icon: 'linkedin', url: 'https://www.linkedin.com/company/speedmaster-consulting', label: 'LinkedIn' },
+    { icon: 'instagram', url: 'https://www.instagram.com/speedmasterconsulting/', label: 'Instagram' },
   ];
 }
