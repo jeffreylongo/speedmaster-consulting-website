@@ -1,64 +1,21 @@
 .logo-wrapper {
   display: inline-block;
-  width: 500px;
+  width: 400px;
   height: auto;
   
   &.footer-logo {
-    filter: brightness(0.9) contrast(1.1);
-    
-    .logo-text, .sub-text {
-      fill: #fff;
-    }
-    
-    image {
-      filter: brightness(5); // Make image white in footer
+    .logo-image {
+      filter: brightness(1.5); // Make image visible in footer
     }
   }
 }
 
-.logo {
+.logo-image {
   width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-.logo-text {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 36px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-}
-
-.sub-text {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 3px;
-}
-
-.needle {
-  transform-origin: 90px 75px;
-  animation: rotateNeedle 3s ease-in-out infinite alternate;
-}
-
-.speedometer {
-  animation: pulse 3s infinite alternate;
-}
-
-@keyframes rotateNeedle {
-  0% {
-    transform: rotate(-30deg);
-  }
-  100% {
-    transform: rotate(30deg);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 1;
+  height: auto;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.05);
   }
 }
