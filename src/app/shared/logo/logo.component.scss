@@ -1,9 +1,11 @@
 .logo-wrapper {
   display: inline-block;
-  width: 400px;
+  width: 120px; // Extremely reduced to prevent any cutting off
   height: auto;
   
   &.footer-logo {
+    width: 110px; // Even smaller in the footer
+    
     .logo-image {
       filter: brightness(1.5); // Make image visible in footer
     }
