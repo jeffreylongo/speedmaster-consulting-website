@@ -6,11 +6,11 @@
 
 .main-content {
   flex: 1 0 auto;
-  padding-top: 70px; // To account for fixed navbar
+  padding-top: 120px; // To account for fixed navbar
   overflow: hidden; // To contain animations
 }
 
 .route-container {
   position: relative;
-  min-height: calc(100vh - 70px - 100px); // Account for navbar and footer
+  min-height: calc(100vh - 120px - 100px); // Account for navbar and footer
 }
