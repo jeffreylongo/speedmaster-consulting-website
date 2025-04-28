@@ -1,0 +1,16 @@
+[build]
+  command = "ng build"
+  publish = "dist/speedmaster-consulting-website"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Config for Angular pre-rendering and SSR (uncomment if needed)
+# [build.environment]
+#   NODE_VERSION = "16"
+#   NPM_VERSION = "8"
+
+# [[plugins]]
+#   package = "@netlify/plugin-angular-universal"

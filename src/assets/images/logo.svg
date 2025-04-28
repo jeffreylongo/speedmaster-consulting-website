@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 150">
+  <!-- Clock/Speedometer -->
+  <g class="speedometer">
+    <circle cx="200" cy="75" r="50" stroke="#333" stroke-width="2" fill="transparent">
+      <animate attributeName="r" from="48" to="52" dur="3s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Ticks -->
+    <g class="ticks">
+      <line x1="200" y1="30" x2="200" y2="35" stroke="#0066CC" stroke-width="2" />
+      <line x1="245" y1="75" x2="240" y2="75" stroke="#0066CC" stroke-width="2" />
+      <line x1="200" y1="120" x2="200" y2="115" stroke="#0066CC" stroke-width="2" />
+      <line x1="155" y1="75" x2="160" y2="75" stroke="#0066CC" stroke-width="2" />
+      
+      <line x1="233" y1="42" x2="229" y2="46" stroke="#0066CC" stroke-width="2" />
+      <line x1="233" y1="108" x2="229" y2="104" stroke="#0066CC" stroke-width="2" />
+      <line x1="167" y1="108" x2="171" y2="104" stroke="#0066CC" stroke-width="2" />
+      <line x1="167" y1="42" x2="171" y2="46" stroke="#0066CC" stroke-width="2" />
+    </g>
+    
+    <!-- Needle -->
+    <line class="needle" x1="200" y1="75" x2="200" y2="40" stroke="#0066CC" stroke-width="3">
+      <animateTransform 
+        attributeName="transform" 
+        type="rotate" 
+        from="0 200 75" 
+        to="360 200 75" 
+        dur="10s" 
+        repeatCount="indefinite" />
+    </line>
+    <circle cx="200" cy="75" r="5" fill="#0066CC">
+      <animate attributeName="r" from="4" to="6" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Speedmaster text -->
+  <text x="20" y="120" class="logo-text" fill="#FF3B30" font-family="Montserrat, sans-serif" font-size="36" font-weight="700">Speedmaster</text>
+  
+  <!-- Consulting text -->
+  <text x="200" y="145" class="sub-text" fill="#0066CC" font-family="Montserrat, sans-serif" font-size="18" font-weight="600" letter-spacing="3" text-anchor="middle">CONSULTING</text>
+</svg>

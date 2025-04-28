@@ -1,0 +1,206 @@
+<!-- Contact Hero Section -->
+<section class="contact-hero-section">
+  <div class="container">
+    <div class="contact-hero-content" @fadeIn>
+      <h1>Get in <span class="text-primary">Touch</span></h1>
+      <p class="contact-subtitle">
+        Have questions about our services or want to discuss your project? Reach out to us today.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="contact-form-section">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Contact Form -->
+      <div class="contact-form-container" @fadeIn>
+        <div class="card">
+          <h2>Send us a Message</h2>
+          <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+          
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+            <div class="form-group">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Your Name</mat-label>
+                <input matInput formControlName="name" placeholder="John Doe">
+                <mat-error *ngIf="submitted && f['name'].errors">
+                  <span *ngIf="f['name'].errors['required']">Name is required</span>
+                  <span *ngIf="f['name'].errors['minlength']">Name must be at least 2 characters</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-group">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Email Address</mat-label>
+                <input matInput formControlName="email" placeholder="you@example.com" type="email">
+                <mat-error *ngIf="submitted && f['email'].errors">
+                  <span *ngIf="f['email'].errors['required']">Email is required</span>
+                  <span *ngIf="f['email'].errors['email']">Please enter a valid email address</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-group">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Phone Number (optional)</mat-label>
+                <input matInput formControlName="phone" placeholder="1234567890" type="tel">
+                <mat-error *ngIf="submitted && f['phone'].errors">
+                  <span *ngIf="f['phone'].errors['pattern']">Please enter a valid phone number</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-group">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Company (optional)</mat-label>
+                <input matInput formControlName="company" placeholder="Your Company">
+              </mat-form-field>
+            </div>
+            
+            <div class="form-group">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Your Message</mat-label>
+                <textarea matInput formControlName="message" rows="5" placeholder="Tell us about your project or question"></textarea>
+                <mat-error *ngIf="submitted && f['message'].errors">
+                  <span *ngIf="f['message'].errors['required']">Message is required</span>
+                  <span *ngIf="f['message'].errors['minlength']">Message must be at least 10 characters</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-group terms-checkbox">
+              <mat-checkbox color="primary" formControlName="agreeToTerms">
+                I agree to be contacted about my inquiry
+              </mat-checkbox>
+              <mat-error *ngIf="submitted && f['agreeToTerms'].errors?.['required']">
+                You must agree to be contacted
+              </mat-error>
+            </div>
+            
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-block" [disabled]="isSubmitting">
+                <span *ngIf="!isSubmitting">Send Message</span>
+                <mat-spinner diameter="24" *ngIf="isSubmitting"></mat-spinner>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Contact Info -->
+      <div class="contact-info-container" @fadeIn>
+        <div class="card">
+          <h2>Contact Information</h2>
+          
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i data-feather="mail"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Email Us</h3>
+              <p><a href="mailto:speedmasterconsulting&#64;gmail.com">speedmasterconsulting&#64;gmail.com</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i data-feather="clock"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Business Hours</h3>
+              <p>Monday - Friday: 9AM - 5PM</p>
+              <p>Saturday & Sunday: Closed</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i data-feather="message-circle"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Response Time</h3>
+              <p>We typically respond within 24 hours during business days.</p>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <h3>Connect With Us</h3>
+            <div class="social-icons">
+              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i data-feather="linkedin"></i>
+              </a>
+              <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <i data-feather="twitter"></i>
+              </a>
+              <a href="https://github.com/jeffreylongo/speedmaster-consulting-website" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i data-feather="github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="contact-faq-section">
+  <div class="container">
+    <div class="section-header" @fadeIn>
+      <h2>Frequently Asked <span class="text-primary">Questions</span></h2>
+      <p>Quick answers to common questions about working with us</p>
+    </div>
+    
+    <div class="faq-grid" @fadeIn>
+      <div class="faq-item">
+        <h3>What happens after I submit this form?</h3>
+        <p>
+          After you submit the form, one of our team members will review your inquiry and get back to you 
+          within 24 business hours to discuss your needs and how we can help.
+        </p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Do you offer free consultations?</h3>
+        <p>
+          Yes, we offer a free initial consultation to understand your business needs and discuss 
+          potential solutions. This helps us provide a more accurate proposal for your project.
+        </p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>What information should I include in my message?</h3>
+        <p>
+          To help us understand your needs better, please include information about your business, 
+          the challenges you're facing, your goals, and any specific requirements or timeframes you have in mind.
+        </p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Do you work with businesses outside your local area?</h3>
+        <p>
+          Yes, we work with businesses from various locations. Thanks to modern collaboration tools, 
+          we can effectively deliver our services remotely while maintaining excellent communication.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content" @fadeIn>
+      <h2>Ready to Transform Your Business?</h2>
+      <p>
+        Let's work together to bring efficiency and innovation to your business operations.
+      </p>
+      <button class="btn btn-primary" (click)="scrollToContact()">
+        Contact Us Now
+      </button>
+    </div>
+  </div>
+</section>

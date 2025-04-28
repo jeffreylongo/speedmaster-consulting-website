@@ -1,0 +1,231 @@
+<!-- Services Hero Section -->
+<section class="services-hero-section">
+  <div class="container">
+    <div class="services-hero-content" @fadeIn>
+      <h1>Our <span class="text-primary">Services</span></h1>
+      <p class="services-subtitle">
+        Comprehensive technology solutions tailored to help your business thrive in the digital age.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Services Overview Section -->
+<section class="services-overview-section" @staggerIn>
+  <div class="container">
+    <div class="services-grid">
+      <div class="service-card" *ngFor="let service of services; let i = index">
+        <div class="service-image">
+          <img [src]="service.image" [alt]="service.title" class="responsive-img" />
+          <div class="service-icon">
+            <i [attr.data-feather]="service.icon"></i>
+          </div>
+        </div>
+        <div class="service-content">
+          <h2>{{ service.title }}</h2>
+          <p class="service-description">{{ service.description }}</p>
+          
+          <div class="service-features">
+            <h3>Key Features</h3>
+            <ul>
+              <li *ngFor="let feature of service.features">
+                <span class="feature-check"><i data-feather="check"></i></span>
+                {{ feature }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Process Section -->
+<section class="process-section">
+  <div class="container">
+    <div class="section-header" @fadeIn>
+      <h2>Our <span class="text-primary">Process</span></h2>
+      <p>How we turn your challenges into solutions</p>
+    </div>
+    
+    <div class="process-timeline" @staggerIn>
+      <div class="process-step" *ngFor="let step of processSteps; let i = index">
+        <div class="step-number">{{ step.number }}</div>
+        <div class="step-content">
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Industries Section -->
+<section class="industries-section">
+  <div class="container">
+    <div class="section-header" @fadeIn>
+      <h2>Industries We <span class="text-primary">Serve</span></h2>
+      <p>Our solutions are applicable across various sectors</p>
+    </div>
+    
+    <div class="industries-grid" @staggerIn>
+      <div class="industry-item">
+        <div class="industry-icon">
+          <i data-feather="shopping-bag"></i>
+        </div>
+        <h3>Retail</h3>
+      </div>
+      
+      <div class="industry-item">
+        <div class="industry-icon">
+          <i data-feather="home"></i>
+        </div>
+        <h3>Real Estate</h3>
+      </div>
+      
+      <div class="industry-item">
+        <div class="industry-icon">
+          <i data-feather="truck"></i>
+        </div>
+        <h3>Logistics</h3>
+      </div>
+      
+      <div class="industry-item">
+        <div class="industry-icon">
+          <i data-feather="activity"></i>
+        </div>
+        <h3>Healthcare</h3>
+      </div>
+      
+      <div class="industry-item">
+        <div class="industry-icon">
+          <i data-feather="briefcase"></i>
+        </div>
+        <h3>Professional Services</h3>
+      </div>
+      
+      <div class="industry-item">
+        <div class="industry-icon">
+          <i data-feather="book"></i>
+        </div>
+        <h3>Education</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Technologies Section -->
+<section class="technologies-section">
+  <div class="container">
+    <div class="section-header" @fadeIn>
+      <h2>Technologies We <span class="text-primary">Use</span></h2>
+      <p>The tools we leverage to build your solutions</p>
+    </div>
+    
+    <div class="technologies-content" @fadeIn>
+      <div class="tech-category">
+        <h3>Programming Languages</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">C#</span>
+          <span class="tech-tag">Java</span>
+        </div>
+      </div>
+      
+      <div class="tech-category">
+        <h3>Frameworks & Libraries</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">Angular</span>
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Django</span>
+          <span class="tech-tag">.NET Core</span>
+        </div>
+      </div>
+      
+      <div class="tech-category">
+        <h3>AI & Machine Learning</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">TensorFlow</span>
+          <span class="tech-tag">PyTorch</span>
+          <span class="tech-tag">scikit-learn</span>
+          <span class="tech-tag">OpenAI APIs</span>
+          <span class="tech-tag">Computer Vision</span>
+        </div>
+      </div>
+      
+      <div class="tech-category">
+        <h3>Cloud & DevOps</h3>
+        <div class="tech-tags">
+          <span class="tech-tag">AWS</span>
+          <span class="tech-tag">Azure</span>
+          <span class="tech-tag">Google Cloud</span>
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">Kubernetes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header" @fadeIn>
+      <h2>Frequently Asked <span class="text-primary">Questions</span></h2>
+      <p>Common questions about our services</p>
+    </div>
+    
+    <div class="faq-content" @fadeIn>
+      <div class="faq-item">
+        <h3>How long does it typically take to implement a business automation solution?</h3>
+        <p>
+          The timeline varies depending on the complexity of the solution and the specific requirements of your business. 
+          Simple automation projects can be completed in as little as 4-6 weeks, while more complex solutions might take 
+          3-6 months. During our initial consultation, we'll provide a more accurate timeline based on your needs.
+        </p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Do I need technical expertise to use the solutions you develop?</h3>
+        <p>
+          No, we design our solutions with user-friendliness in mind. We provide comprehensive training and documentation 
+          to ensure your team can effectively use the tools we develop. Additionally, our ongoing support ensures you 
+          always have assistance when needed.
+        </p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>How do you ensure the security of our data?</h3>
+        <p>
+          Security is a top priority in all our solutions. We implement industry-standard security practices, including 
+          data encryption, secure authentication, regular security audits, and compliance with relevant regulations. 
+          We also provide recommendations for your internal security practices.
+        </p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Can you integrate with our existing systems?</h3>
+        <p>
+          Yes, we specialize in creating solutions that integrate seamlessly with your existing systems and workflows. 
+          During the discovery phase, we'll assess your current technology stack and develop a plan for smooth integration.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content" @fadeIn>
+      <h2>Ready to Transform Your Business?</h2>
+      <p>
+        Contact us today to schedule a free consultation and learn how our services can help your business thrive.
+      </p>
+      <a routerLink="/contact" class="btn btn-primary">Get Started</a>
+    </div>
+  </div>
+</section>

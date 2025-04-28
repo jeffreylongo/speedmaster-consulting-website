@@ -1,0 +1,53 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <app-logo [isFooter]="true"></app-logo>
+        <p class="footer-tagline">
+          Helping businesses automate and leverage AI for maximum efficiency
+        </p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <ul>
+            <li *ngFor="let item of navItems">
+              <a [routerLink]="item.path">{{ item.label }}</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>
+              <a href="mailto:speedmasterconsulting&#64;gmail.com">
+                <i data-feather="mail"></i> speedmasterconsulting&#64;gmail.com
+              </a>
+            </li>
+            <li>
+              <a routerLink="/contact" class="btn btn-outline">Get in Touch</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="copyright">
+        &copy; {{ currentYear }} Speedmaster Consulting. All rights reserved.
+      </div>
+      
+      <div class="social-links">
+        <a *ngFor="let social of socialLinks" 
+           [href]="social.url" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           [attr.aria-label]="social.label">
+          <i [attr.data-feather]="social.icon"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

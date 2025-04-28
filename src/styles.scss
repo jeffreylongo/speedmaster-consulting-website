@@ -1,0 +1,278 @@
+// Main Styles
+
+// Variables
+$primary-color: #FF3B30; // Red from logo
+$secondary-color: #0066CC; // Blue from logo
+$dark-color: #212121;
+$light-color: #F8F9FA;
+$gray-color: #6c757d;
+$white-color: #FFFFFF;
+
+// Typography
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
+
+// Import Angular Material theme
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+// Base styles
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: $font-primary;
+  font-size: 16px;
+  color: $dark-color;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $white-color;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-secondary;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3rem;
+  
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+// Utility classes
+.text-primary {
+  color: $primary-color;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+.bg-primary {
+  background-color: $primary-color;
+}
+
+.bg-secondary {
+  background-color: $secondary-color;
+}
+
+.bg-light {
+  background-color: $light-color;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section {
+  padding: 5rem 0;
+  
+  @media (max-width: 768px) {
+    padding: 3rem 0;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-family: $font-primary;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  color: $white-color;
+  
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary-color;
+  color: $white-color;
+  
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid $primary-color;
+  color: $primary-color;
+  
+  &:hover {
+    background-color: $primary-color;
+    color: $white-color;
+  }
+}
+
+// Animation classes
+.fade-in {
+  animation: fadeIn 0.8s ease-in;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s ease-in-out;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-in-out;
+}
+
+// Keyframes
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+// Card styles
+.card {
+  background-color: $white-color;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Form styles
+input, textarea, select {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: $font-primary;
+  transition: border 0.3s ease;
+  
+  &:focus {
+    outline: none;
+    border-color: $secondary-color;
+  }
+}
+
+label {
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: 500;
+}
+
+// Responsive grid
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    gap: 20px;
+  }
+}
+
+// Accessibility
+:focus {
+  outline: 2px solid $secondary-color;
+}
+
+// Custom scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $light-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gray-color;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: darken($gray-color, 10%);
+}
+
+// Error styles
+.error-message {
+  color: $primary-color;
+  font-size: 0.85rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+// Success styles
+.success-message {
+  color: #28a745;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}

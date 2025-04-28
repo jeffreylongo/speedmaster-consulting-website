@@ -1,0 +1,108 @@
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content" @fadeIn>
+      <h1>Automation & AI Solutions for <span class="text-primary">Growing Businesses</span></h1>
+      <p class="hero-subtitle">
+        We help small and medium businesses leverage technology to streamline operations, 
+        reduce costs, and drive growth through custom software solutions.
+      </p>
+      <div class="hero-buttons">
+        <a routerLink="/services" class="btn btn-primary">Explore Services</a>
+        <a routerLink="/contact" class="btn btn-outline">Get a Free Consultation</a>
+      </div>
+    </div>
+    <div class="hero-image" @fadeIn>
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40" 
+           alt="Business professionals discussing automation solutions"
+           class="responsive-img" />
+    </div>
+  </div>
+</section>
+
+<!-- Services Preview Section -->
+<section class="services-section" @staggerIn>
+  <div class="container">
+    <div class="section-header">
+      <h2>Our <span class="text-primary">Services</span></h2>
+      <p>Comprehensive solutions to drive your business forward</p>
+    </div>
+    
+    <div class="services-grid">
+      <div class="card" *ngFor="let service of services">
+        <div class="card-icon">
+          <i [attr.data-feather]="service.icon"></i>
+        </div>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+        <a routerLink="/services" class="service-link">Learn more <i data-feather="arrow-right"></i></a>
+      </div>
+    </div>
+    
+    <div class="section-cta">
+      <a routerLink="/services" class="btn btn-primary">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- About Preview Section -->
+<section class="about-section">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-image" @fadeIn>
+        <img src="https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1" 
+             alt="AI technology visualization"
+             class="responsive-img" />
+      </div>
+      <div class="about-text" @fadeIn>
+        <h2>Driving <span class="text-primary">Innovation</span> Through Technology</h2>
+        <p>
+          At Speedmaster Consulting, we believe that every business deserves access to cutting-edge technology. 
+          Our team of experienced software engineers specializes in developing custom solutions that automate 
+          workflows and integrate AI to solve your unique business challenges.
+        </p>
+        <p>
+          Whether you're looking to streamline operations, enhance customer experiences, or gain valuable insights 
+          from your data, we have the expertise to help you achieve your goals.
+        </p>
+        <a routerLink="/about" class="btn btn-outline">More About Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section" @staggerIn>
+  <div class="container">
+    <div class="section-header">
+      <h2>What Our <span class="text-primary">Clients Say</span></h2>
+      <p>Success stories from businesses we've helped transform</p>
+    </div>
+    
+    <div class="testimonials-slider">
+      <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+        <div class="quote-icon">
+          <i data-feather="message-circle"></i>
+        </div>
+        <p class="testimonial-quote">{{ testimonial.quote }}</p>
+        <div class="testimonial-author">
+          <p class="author-name">{{ testimonial.author }}</p>
+          <p class="author-position">{{ testimonial.position }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section" id="contact-section">
+  <div class="container">
+    <div class="cta-content" @fadeIn>
+      <h2>Ready to Transform Your Business?</h2>
+      <p>
+        Let's discuss how we can help you leverage technology to achieve your business goals.
+      </p>
+      <a routerLink="/contact" class="btn btn-primary">Contact Us Today</a>
+    </div>
+  </div>
+</section>

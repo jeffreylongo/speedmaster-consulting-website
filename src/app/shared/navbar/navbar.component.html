@@ -1,0 +1,47 @@
+<header class="navbar" [class.scrolled]="isScrolled">
+  <div class="container navbar-container">
+    <a routerLink="/" class="logo-container" aria-label="Go to home page">
+      <app-logo></app-logo>
+    </a>
+    
+    <!-- Desktop Menu -->
+    <nav class="desktop-menu">
+      <ul class="nav-list">
+        <li *ngFor="let item of navItems" class="nav-item">
+          <a [routerLink]="item.path" 
+             routerLinkActive="active" 
+             [routerLinkActiveOptions]="{exact: item.path === '/'}"
+             class="nav-link">
+            {{ item.label }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/contact" class="btn btn-primary">Get Started</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-toggle" (click)="toggleMenu()" aria-label="Toggle navigation menu">
+      <mat-icon>{{ isMenuOpen ? 'close' : 'menu' }}</mat-icon>
+    </button>
+  </div>
+  
+  <!-- Mobile Menu Dropdown -->
+  <div class="mobile-menu" *ngIf="isMenuOpen" [@fadeInOut]>
+    <ul class="mobile-nav-list">
+      <li *ngFor="let item of navItems" class="mobile-nav-item" [@slideDown]>
+        <a [routerLink]="item.path" 
+           routerLinkActive="active"
+           [routerLinkActiveOptions]="{exact: item.path === '/'}"
+           class="mobile-nav-link" 
+           (click)="closeMenu()">
+          {{ item.label }}
+        </a>
+      </li>
+      <li class="mobile-nav-item" [@slideDown]>
+        <a routerLink="/contact" class="btn btn-primary btn-block" (click)="closeMenu()">Get Started</a>
+      </li>
+    </ul>
+  </div>
+</header>

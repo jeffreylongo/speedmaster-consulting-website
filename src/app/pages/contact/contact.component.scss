@@ -1,0 +1,328 @@
+// Variables
+$primary-color: #FF3B30; // Red from logo
+$secondary-color: #0066CC; // Blue from logo
+$dark-color: #212121;
+$light-color: #F8F9FA;
+$white-color: #FFFFFF;
+$gray-color: #6c757d;
+
+// Contact Hero Section
+.contact-hero-section {
+  padding: 6rem 0 4rem;
+  background-color: $white-color;
+  position: relative;
+  overflow: hidden;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom right, $light-color 0%, $light-color 50%, transparent 50%);
+    z-index: 1;
+  }
+}
+
+.contact-hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    
+    @media (max-width: 991px) {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  color: $gray-color;
+  line-height: 1.6;
+}
+
+// Contact Form Section
+.contact-form-section {
+  padding: 5rem 0;
+  background-color: $light-color;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  
+  @media (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background-color: $white-color;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  height: 100%;
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: $dark-color;
+    
+    @media (max-width: 768px) {
+      font-size: 1.75rem;
+    }
+  }
+  
+  p {
+    color: $gray-color;
+    margin-bottom: 2rem;
+  }
+}
+
+.contact-form {
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .form-actions {
+    margin-top: 2rem;
+  }
+  
+  .btn-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    
+    mat-spinner {
+      margin: 0 auto;
+    }
+  }
+}
+
+.terms-checkbox {
+  margin-top: 1rem;
+  
+  mat-error {
+    margin-top: 0.5rem;
+    display: block;
+    font-size: 0.85rem;
+  }
+}
+
+// Contact Info Styles
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  
+  &:last-of-type {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba($secondary-color, 0.1);
+  color: $secondary-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  
+  i {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.contact-details {
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: $dark-color;
+  }
+  
+  p {
+    margin-bottom: 0.5rem;
+    color: $gray-color;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    a {
+      color: $secondary-color;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.social-links {
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: $dark-color;
+  }
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba($secondary-color, 0.1);
+    color: $secondary-color;
+    transition: all 0.3s ease;
+    
+    i {
+      width: 20px;
+      height: 20px;
+    }
+    
+    &:hover {
+      background-color: $secondary-color;
+      color: $white-color;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// FAQ Section
+.contact-faq-section {
+  padding: 5rem 0;
+  background-color: $white-color;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.faq-item {
+  h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: $dark-color;
+    position: relative;
+    padding-left: 1.5rem;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $primary-color;
+    }
+  }
+  
+  p {
+    color: $gray-color;
+    line-height: 1.7;
+  }
+}
+
+// CTA Section
+.cta-section {
+  padding: 5rem 0;
+  background-color: $secondary-color;
+  color: $white-color;
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  
+  .btn-primary {
+    background-color: $white-color;
+    color: $secondary-color;
+    
+    &:hover {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+}
+
+// Angular Material Customization
+::ng-deep {
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: rgba($gray-color, 0.4);
+  }
+  
+  .mat-form-field.mat-focused .mat-form-field-outline {
+    color: $secondary-color;
+  }
+  
+  .mat-form-field.mat-form-field-invalid .mat-form-field-outline {
+    color: $primary-color;
+  }
+  
+  .mat-error {
+    color: $primary-color;
+  }
+  
+  .success-snackbar {
+    background-color: #28a745;
+    color: $white-color;
+  }
+  
+  .error-snackbar {
+    background-color: $primary-color;
+    color: $white-color;
+  }
+}

@@ -1,0 +1,149 @@
+<!-- About Hero Section -->
+<section class="about-hero-section">
+  <div class="container">
+    <div class="about-hero-content" @fadeIn>
+      <h1>About <span class="text-primary">Speedmaster</span> Consulting</h1>
+      <p class="about-subtitle">
+        We are a team of passionate software engineers dedicated to helping businesses leverage 
+        technology to streamline operations and drive growth.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Our Story Section -->
+<section class="story-section">
+  <div class="container">
+    <div class="story-content">
+      <div class="story-image" @fadeIn>
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4" 
+             alt="Business automation concept"
+             class="responsive-img" />
+      </div>
+      <div class="story-text" @fadeIn>
+        <h2>Our <span class="text-primary">Story</span></h2>
+        <p>
+          Speedmaster Consulting was founded with a clear mission: to make powerful technology 
+          accessible to small and medium businesses. We realized that many growing companies struggle 
+          to adopt automation and AI solutions due to limited resources or technical expertise.
+        </p>
+        <p>
+          Our team of experienced software engineers specializes in developing custom solutions that 
+          automate workflows, integrate AI, and solve unique business challenges. We take pride in 
+          helping local businesses become more efficient and competitive in today's digital landscape.
+        </p>
+        <p>
+          Today, we work with businesses across various industries, delivering technology solutions 
+          that not only solve immediate problems but also set our clients up for long-term success.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Values Section -->
+<section class="values-section" @staggerIn>
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Core <span class="text-primary">Values</span></h2>
+      <p>The principles that guide our work and relationships</p>
+    </div>
+    
+    <div class="values-grid">
+      <div class="value-item" *ngFor="let value of coreValues">
+        <div class="value-icon">
+          <i [attr.data-feather]="value.icon"></i>
+        </div>
+        <h3>{{ value.title }}</h3>
+        <p>{{ value.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Team Section -->
+<section class="team-section" @staggerIn>
+  <div class="container">
+    <div class="section-header">
+      <h2>Meet Our <span class="text-primary">Team</span></h2>
+      <p>The experts behind Speedmaster Consulting</p>
+    </div>
+    
+    <div class="team-grid">
+      <div class="team-member" *ngFor="let member of teamMembers">
+        <div class="member-image">
+          <img [src]="member.image" [alt]="member.name" class="responsive-img" />
+        </div>
+        <div class="member-info">
+          <h3>{{ member.name }}</h3>
+          <p class="member-position">{{ member.position }}</p>
+          <p class="member-bio">{{ member.bio }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-choose-section">
+  <div class="container">
+    <div class="section-header" @fadeIn>
+      <h2>Why Choose <span class="text-primary">Speedmaster</span></h2>
+      <p>What sets us apart from other consulting firms</p>
+    </div>
+    
+    <div class="why-choose-content" @fadeIn>
+      <div class="why-choose-item">
+        <div class="why-choose-icon">
+          <i data-feather="code"></i>
+        </div>
+        <div class="why-choose-text">
+          <h3>Technical Expertise</h3>
+          <p>
+            Our team consists of skilled software engineers with experience in developing 
+            complex systems and integrating modern technologies.
+          </p>
+        </div>
+      </div>
+      
+      <div class="why-choose-item">
+        <div class="why-choose-icon">
+          <i data-feather="target"></i>
+        </div>
+        <div class="why-choose-text">
+          <h3>Results-Focused Approach</h3>
+          <p>
+            We measure our success by the tangible results we deliver - whether that's cost 
+            savings, increased efficiency, or improved customer experiences.
+          </p>
+        </div>
+      </div>
+      
+      <div class="why-choose-item">
+        <div class="why-choose-icon">
+          <i data-feather="headphones"></i>
+        </div>
+        <div class="why-choose-text">
+          <h3>Dedicated Support</h3>
+          <p>
+            We don't just build and leave. We provide ongoing support to ensure your technology 
+            solutions continue to serve your business needs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content" @fadeIn>
+      <h2>Ready to Transform Your Business?</h2>
+      <p>
+        Let's discuss how we can help you leverage technology to achieve your business goals.
+      </p>
+      <a routerLink="/contact" class="btn btn-primary">Contact Us Today</a>
+    </div>
+  </div>
+</section>
